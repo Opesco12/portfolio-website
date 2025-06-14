@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Portfolio</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="imgContainer">
+                <img src="./image.jpeg" height="auto" width="350px" />
+                </div>
+            <h1>Hi, I'm Emmanuel</h1>
+            <p>Web & Mobile Developer</p>
+            <p>Welcome to my portfolio! I create modern, visually appealing and efficient mobile and web applications using React and React Native</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a developer passionate about creating user-friendly and visually appealing websites. With a strong foundation in front-end development, I love turning ideas into reality through code. When I'm not coding, you can find me exploring new technologies or working on exciting personal projects.</p>
+            <h3 style="text-align: center; margin: 20px 0;">My Skills</h3>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Typescript</li>
+                <li>React</li>
+                <li>React Native</li>
+                <li>Expo</li>
+                <li>Python</li>
+                <li>Firebase</li>
+                <li>Supabase</li>
+                <li>MongoDB</li>
+                <li>Nodejs</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>UTLAM Mobile App</h3>
+                    <p>A Mobile App built for UTL Asset Management.</p>
+                    <img src="./Simulator Screen Shot - iPhone 14 Pro Max - 2025-06-10 at 07.45.49.png" height="400px">
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Project Two: Weather Dashboard</h3>
+                    <p>A weather dashboard that fetches real-time weather data using a public API, styled with CSS Grid and animated with JavaScript.</p>
+                    <img src="./Screenshot 2025-06-10 at 08.00.31.png"  height="400px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-message">Thank you for your message! I'll get back to you soon.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Emmanuel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formMessage.style.display = 'block';
+            form.reset();
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
